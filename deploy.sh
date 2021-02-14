@@ -1,3 +1,5 @@
+#!/bin/bash
+
 HOST="pi-zero"
 INSTALL_DIR="~/pyled"
 

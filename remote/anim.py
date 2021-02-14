@@ -4,10 +4,12 @@ import pigpio
 import time
 import colorsys
 
+
 pi = pigpio.pi()
 if not pi.connected:
     print("not connected to pigpiod")
     exit(1)
+
 
 # HW configuration
 MAX_COLOR=255
@@ -24,7 +26,7 @@ def set_color(red, green, blue):
 
 
 while True:
-    for i in range(0, 100):
-        r, g, b = colorsys.hsv_to_rgb(i / 100, 1, 1)
+    for i in range(0, 200):
+        r, g, b = colorsys.hsv_to_rgb(i / 200, 1, .1)
         set_color(r * MAX_COLOR, g * MAX_COLOR, b * MAX_COLOR)
         time.sleep(.05)
