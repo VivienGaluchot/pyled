@@ -26,7 +26,7 @@ def set_color(red, green, blue):
 
 
 while True:
-    for i in range(0, 200):
-        r, g, b = colorsys.hsv_to_rgb(i / 200, 1, .1)
+    for i in range(0, 1000):
+        r, g, b = colorsys.hsv_to_rgb(i / 1000, 1, .1)
         set_color(r * MAX_COLOR, g * MAX_COLOR, b * MAX_COLOR)
         time.sleep(.05)
